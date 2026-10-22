@@ -1,7 +1,6 @@
-import React, { lazy, Suspense, useRef } from 'react';
+import React, { useRef } from 'react';
 import LandingPage, { Footer } from './LandingPage';
-
-const CodeConverter = lazy(() => import('./CodeConverter'));
+import CodeConverter from './CodeConverter';
 
 function App() {
   const converterRef = useRef(null);
@@ -14,9 +13,7 @@ function App() {
     <>
       <LandingPage onOpenConverter={openConverter} />
       <div id="converter" ref={converterRef} className="scroll-mt-6">
-        <Suspense fallback={<div className="bg-[#080f1d] px-4 py-20 text-center text-slate-400" role="status">Loading converter…</div>}>
-          <CodeConverter />
-        </Suspense>
+        <CodeConverter />
       </div>
       <Footer onOpenConverter={openConverter} />
     </>

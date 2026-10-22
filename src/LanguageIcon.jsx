@@ -8,6 +8,7 @@ const iconNames = {
   typescript: 'typescript/typescript-original',
   python: 'python/python-original',
   java: 'java/java-original',
+  c: 'c/c-original',
   cpp: 'cplusplus/cplusplus-original',
   csharp: 'csharp/csharp-original',
   dart: 'dart/dart-original',
@@ -29,11 +30,7 @@ export default function LanguageIcon({ language, size = 'md', className = '' }) 
       aria-label={meta ? `${meta.label} icon` : 'Unknown programming language'}
       className={`inline-flex shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/[0.08] shadow-inner shadow-white/5 ${compact ? 'h-8 w-8' : 'h-12 w-12'} ${className}`}
     >
-      {language === 'c' ? (
-        <span aria-hidden="true" className={`grid place-items-center rounded-full bg-[#00599c] font-sans font-bold leading-none text-white ${compact ? 'h-5 w-5 text-sm' : 'h-8 w-8 text-xl'}`}>
-          C
-        </span>
-      ) : icon && !failed ? (
+      {icon && !failed ? (
         <img
           src={`${root}${icon}.svg`}
           alt=""
