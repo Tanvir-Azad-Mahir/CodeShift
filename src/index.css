@@ -1,4 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
-:root {font-family:'DM Sans',system-ui,sans-serif;color:#eaf1ff;background:#070d19;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
-html {scroll-behavior:smooth} body{margin:0;min-width:320px} *{box-sizing:border-box} button{cursor:pointer} button:disabled{cursor:not-allowed} .serif{font-family:'Instrument Serif',Georgia,serif} ::selection{background:#6ee7b7;color:#07120e} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:root {color-scheme:light;font-family:'JetBrains Mono',Consolas,monospace;color:#0f2740;background:#eff8ff;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+html {scroll-behavior:smooth} body{margin:0;min-width:320px} *{box-sizing:border-box} button{cursor:pointer} button:disabled{cursor:not-allowed} .serif{font-family:inherit} ::selection{background:#38bdf8;color:#082f49} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+#app[data-theme="dark"] { color-scheme: dark; }
+#app[data-theme="dark"] [class~="bg-[#eff8ff]"],
+#app[data-theme="dark"] [class~="bg-[#e3f2ff]"],
+#app[data-theme="dark"] [class~="bg-[#eaf5ff]"],
+#app[data-theme="dark"] [class~="bg-[#d8edff]"],
+#app[data-theme="dark"] [class~="bg-[#f3f9ff]"],
+#app[data-theme="dark"] [class~="bg-[#f2f8ff]"],
+#app[data-theme="dark"] [class~="bg-[#f8fbff]"],
+#app[data-theme="dark"] [class~="bg-sky-50/80"],
+#app[data-theme="dark"] [class~="bg-sky-50/95"],
+#app[data-theme="dark"] [class~="bg-sky-100/70"],
+#app[data-theme="dark"] [class~="bg-sky-100/80"],
+#app[data-theme="dark"] [class~="bg-white"],
+#app[data-theme="dark"] [class~="bg-white/85"] {
+  background-color: #0d1b2a !important;
+}
+#app[data-theme="dark"] [class~="bg-gradient-to-br"] {
+  background-image: linear-gradient(to bottom right, #0b1726, #101f31) !important;
+}
+#app[data-theme="dark"] [class~="text-slate-900"],
+#app[data-theme="dark"] [class~="text-slate-800"] { color: #f1f5f9 !important; }
+#app[data-theme="dark"] [class~="text-slate-700"],
+#app[data-theme="dark"] [class~="text-slate-600"] { color: #cbd5e1 !important; }
+#app[data-theme="dark"] [class~="text-slate-500"] { color: #94a3b8 !important; }
+#app[data-theme="dark"] [class~="text-sky-700"] { color: #7dd3fc !important; }
+#app[data-theme="dark"] [class~="text-sky-800"] { color: #bae6fd !important; }
+#app[data-theme="dark"] [class~="border-slate-300/70"],
+#app[data-theme="dark"] [class~="border-slate-300/80"],
+#app[data-theme="dark"] [class~="divide-slate-300/70"] {
+  border-color: rgb(51 65 85 / 0.8) !important;
+}
+#app[data-theme="dark"] [class~="hover:bg-sky-100/80"]:hover,
+#app[data-theme="dark"] [class~="hover:bg-sky-100"]:hover,
+#app[data-theme="dark"] [class~="hover:bg-[#d8edff]"]:hover {
+  background-color: #17283b !important;
+}
+#app[data-theme="dark"] [class~="supports-[backdrop-filter]:bg-white/95"] {
+  background-color: rgb(2 6 23 / 0.92) !important;
+}

@@ -28,7 +28,7 @@ export default function LanguageIcon({ language, size = 'md', className = '' }) 
     <span
       role="img"
       aria-label={meta ? `${meta.label} icon` : 'Unknown programming language'}
-      className={`inline-flex shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white/[0.08] shadow-inner shadow-white/5 ${compact ? 'h-8 w-8' : 'h-12 w-12'} ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center rounded-xl border border-slate-300/70 bg-sky-100 shadow-inner shadow-sky-200/50 ${compact ? 'h-8 w-8' : 'h-12 w-12'} ${className}`}
     >
       {icon && !failed ? (
         <img
@@ -39,7 +39,7 @@ export default function LanguageIcon({ language, size = 'md', className = '' }) 
           className={compact ? 'h-5 w-5 object-contain' : 'h-8 w-8 object-contain'}
         />
       ) : (
-        <span className={`${compact ? 'text-[10px]' : 'text-xs'} font-mono font-extrabold text-emerald-200`}>
+        <span className={`${compact ? 'text-[10px]' : 'text-xs'} font-mono font-extrabold text-sky-700`}>
           {meta?.short ?? '?'}
         </span>
       )}
