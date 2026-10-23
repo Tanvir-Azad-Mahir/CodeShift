@@ -421,8 +421,10 @@ ${sourceCode}
 // Start server
 // -----------------------------------
 
-app.listen(PORT, () => {
-  console.log(`CodeShift API running on port ${PORT}`);
-  console.log(`Gemini model: ${MODEL}`);
-  console.log("AI tools: explain, debug, optimize, document");
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`CodeShift API running on port ${PORT}`);
+  });
+}
+
+export default app;
